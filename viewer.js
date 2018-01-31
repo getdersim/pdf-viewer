@@ -3580,7 +3580,7 @@ exports.PDFFindController = PDFFindController;
 "use strict";
 
 
-var DEFAULT_URL = window.location.href.match(/url=([^&]+)/)[1];
+var DEFAULT_URL = window.location.search.slice(5);
 ;
 var pdfjsWebApp = void 0;
 {
