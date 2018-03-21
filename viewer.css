@@ -358,7 +358,7 @@ html {
 body {
   height: 100%;
   width: 100%;
-  background-color: #eceff1;
+  background-color: transparent;
   background-image: url(images/texture.png);
 }
 
@@ -605,7 +605,7 @@ html[dir='rtl'] #outerContainer.sidebarOpen #viewerContainer {
 #toolbarSidebar {
   width: 100%;
   height: 32px;
-  background-color: #24292e; /* fallback */
+  background-color: #2ab6f6; /* fallback */
   background-image: url(images/texture.png);
 }
 html[dir='ltr'] #toolbarSidebar {
@@ -639,7 +639,7 @@ html[dir='rtl'] #sidebarResizer {
 #toolbarContainer, .findbar, .secondaryToolbar {
   position: relative;
   height: 32px;
-  background-color: #24292e; /* fallback */
+  background-color: #2ab6f6; /* fallback */
   background-image: url(images/texture.png);
 }
 html[dir='ltr'] #toolbarContainer, .findbar, .secondaryToolbar {
@@ -663,8 +663,8 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
   position: relative;
   width: 100%;
   height: 4px;
-  background-color: #333;
-  border-bottom: 1px solid #333;
+  background-color: #2ab6f6;
+  border-bottom: 1px solid #b0b0b0;
 }
 
 #loadingBar .progress {
