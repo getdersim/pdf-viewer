@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+Copyright 2016 Mozilla Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Ders.im Mobil PDF Görüntüleyici</title>
+
+    <link rel="stylesheet" href="pdf_viewer.css">
+    <link rel="stylesheet" type="text/css" href="viewer.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="../build/pdf.js"></script>
+    <script src="pdf_viewer.js"></script>
+  </head>
+
+  <body>
+    <header style="background-color:#29b6f6">
+      <a href="#">
+        <h1><span class="fa fa-graduation-cap"></span></h1>
+      </a>
+    </header>
+
+    <div id="viewerContainer">
+      <div id="viewer" class="pdfViewer"></div>
+    </div>
+
+    <div id="loadingBar" style="margin-top: 10%">
+      <div class="progress"></div>
+      <div class="glimmer"></div>
+      <center>
+        <div class="loader">
+          <svg style="width: 120px; height: auto;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <rect x="0" y="0" width="4" height="10" fill="#333">
+              <animateTransform attributeType="xml"
+                attributeName="transform" type="translate"
+                values="0 0; 0 20; 0 0"
+                begin="0" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="10" y="0" width="4" height="10" fill="#333">
+              <animateTransform attributeType="xml"
+                attributeName="transform" type="translate"
+                values="0 0; 0 20; 0 0"
+                begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="20" y="0" width="4" height="10" fill="#333">
+              <animateTransform attributeType="xml"
+                attributeName="transform" type="translate"
+                values="0 0; 0 20; 0 0"
+                begin="0.4s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+          </svg>
+        </div>
+      </center>
+    </div>
+
+    <div id="errorWrapper" hidden="true">
+      <div id="errorMessageLeft">
+        <span id="errorMessage"></span>
+        <button id="errorShowMore">
+          More Information
+        </button>
+        <button id="errorShowLess">
+          Less Information
+        </button>
+      </div>
+      <div id="errorMessageRight">
+        <button id="errorClose">
+          Close
+        </button>
+      </div>
+      <div class="clearBoth"></div>
+      <textarea id="errorMoreInfo" hidden="true" readonly="readonly"></textarea>
+    </div>
+
+    <footer>
+      <!-- <span class="toolbarButton fa fa-angle-up" id="previous"></span> -->
+      <button class="toolbarButton pageUp" title="Previous Page" id="previous"> </button>
+      <button class="toolbarButton pageDown" title="Next Page" id="next"></button>
+
+      <input type="number" id="pageNumber" class="toolbarField pageNumber" value="1" size="4" min="1">
+
+      <button class="toolbarButton zoomOut" title="Zoom Out" id="zoomOut"></button>
+      <button class="toolbarButton zoomIn" title="Zoom In" id="zoomIn"></button>
+    </footer>
+
+     <script src="viewer.js"></script>
+  </body>
+</html>
